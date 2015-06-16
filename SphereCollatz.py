@@ -41,8 +41,8 @@ def collatz_eval (i, j) :
     # <your code>
     assert i > 0
     assert j > 0
-    assert i <= 1000000
-    assert j <= 1000000
+    assert i < 1000000
+    assert j < 1000000
 
     max_cycle_length = 1
     cycle_length = 1

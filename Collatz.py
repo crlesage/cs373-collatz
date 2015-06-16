@@ -45,7 +45,7 @@ def collatz_eval (i, j) :
         j = temp
 
     for n in range (i, j + 1) :
-        cycle_length = compute_cycle_length (n)
+        cycle_length = collatz_computeCycleLength (n)
 
         if cycle_length > max_cycle_length :
             max_cycle_length = cycle_length
@@ -56,7 +56,7 @@ def collatz_eval (i, j) :
     return max_cycle_length
 
 # Computes and returns cycle length of n.
-def compute_cycle_length (n) :
+def collatz_computeCycleLength (n) :
     assert n > 0
     cycle_length = 1
     while n > 1 :
