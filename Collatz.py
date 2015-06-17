@@ -6,14 +6,10 @@
 # Glenn P. Downing
 # ---------------------------
 
-import math
-
 # ---
 # Global Cache 
 # ---
-cache = [None] * 1000000
-# Base cases
-cache[1:2] = [1, 2]
+cache = {1:1, 1:2}
 # Eager cache, powers of 2
 cache[4] = 3
 cache[8] = 4
@@ -58,7 +54,7 @@ def collatz_eval (i, j) :
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
     """
-    # <your code>
+
     assert i > 0
     assert j > 0
     assert i < 1000000
@@ -71,16 +67,22 @@ def collatz_eval (i, j) :
         j = temp
     assert j >= i
 
-    max_cycle_length = 0;
+    max_cycle_length = 0
 
     for n in range (i, j + 1) :
-        if (cache[n] == None) :
-            cache[n] = collatz_helper (n)
+        # Check to see if already in cache
+        if (n in cache) :
+            if cache[n] > max_cycle_length :
+                max_cycle_length = cache[n]
+
+        # If not, use helper to get cycle length and store in cache
+        cache[n] = collatz_helper(n)
+
+        # Update max cycle length if needed
         if cache[n] > max_cycle_length :
             max_cycle_length = cache[n]
 
     assert max_cycle_length > 0
-
     return max_cycle_length
 
 # Computes and returns cycle length of n.
@@ -88,34 +90,24 @@ def collatz_helper (n) :
     assert n > 0
 
     # Cycle length less than 3 is itself
-    # if (n < 3) :
-    #     return n
+    if (n < 3) :
+        return n
 
     # Compute cycle length otherwise
-    cycle_length = 1
-    temp = n
+    cycle_length = 0
     # If not in cache already, find cycle length
-    while (cache[n] == None) :
+    while (n not in cache) :
         if (n % 2) == 0 :
-            # Computes if power of 2, cycle length = (log base 2 of (n) + 1)
-            # Maybe just make eager cache and skip this step (not many values)
-            # if ((n & (n - 1)) == 0) and (n != 0) :
-            #     return (int)(math.log(n, 2) + 1)
             n = (n // 2)
             cycle_length += 1
-
+            assert cycle_length > 0
         else :
             n += (n >> 1) + 1
             cycle_length += 2
+            assert cycle_length > 0
 
-        # Add in cache
-        cache[temp] = cycle_length + 1
-
-    assert cycle_length > 0
-
-    # Return the current cycle length plus if there is a cache value (minus one for repeat)
-    #cache_val = (int)cache[temp]
-    return cycle_length + cache[n] - 1
+    # Return the current cycle length plus if there is a cache value
+    return cycle_length + cache[n]
 
 # -------------
 # collatz_print
