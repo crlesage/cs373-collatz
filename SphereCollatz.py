@@ -18,6 +18,10 @@ import sys
 # ---
 # Global Cache 
 # ---
+"""
+Cache dictionary for reference.
+Includes eager cache represented by powers of 2.
+"""
 cache = {1:1, 1:2}
 # Eager cache, powers of 2
 cache[4] = 3
@@ -39,6 +43,9 @@ cache[131072] = 18
 cache[262144] = 19
 cache[524288] = 20
 
+#Meta Cache
+# meta_cache = {1000: 179, 2000: 182, 3000: 217}
+
 # ------------
 # collatz_read
 # ------------
@@ -56,13 +63,16 @@ def collatz_read (s) :
 # collatz_eval
 # ------------
 
+
 def collatz_eval (i, j) :
     """
     i the beginning of the range, inclusive
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
-    """
 
+    Computes the max cycle length between i and j. 
+    Stores cycle lengths in Cache for a quick reference.
+    """
     assert i > 0
     assert j > 0
     assert i < 1000000
@@ -76,6 +86,11 @@ def collatz_eval (i, j) :
     assert j >= i
 
     max_cycle_length = 0
+
+    # Meta Cache check
+    # if ((j - i) > 1000) :
+    #     for n in range (i, (i / 1000)) 
+
 
     for n in range (i, j + 1) :
         # Check to see if already in cache
@@ -93,7 +108,6 @@ def collatz_eval (i, j) :
     assert max_cycle_length > 0
     return max_cycle_length
 
-# Computes and returns cycle length of n.
 def collatz_helper (n) :
     """
     Computes and returns cycle length of n + cycle lengths found in cache

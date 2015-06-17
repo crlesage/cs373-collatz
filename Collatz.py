@@ -37,9 +37,6 @@ cache[524288] = 20
 #Meta Cache
 # meta_cache = {1000: 179, 2000: 182, 3000: 217}
 
-
-
-
 # ------------
 # collatz_read
 # ------------
@@ -67,7 +64,6 @@ def collatz_eval (i, j) :
     Computes the max cycle length between i and j. 
     Stores cycle lengths in Cache for a quick reference.
     """
-
     assert i > 0
     assert j > 0
     assert i < 1000000
@@ -107,7 +103,6 @@ def collatz_helper (n) :
     """
     Computes and returns cycle length of n + cycle lengths found in cache
     """
-
     assert n > 0
 
     # Cycle length less than 3 is itself
