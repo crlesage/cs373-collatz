@@ -9,6 +9,10 @@
 # ---
 # Global Cache 
 # ---
+"""
+Cache dictionary for reference.
+Includes eager cache represented by powers of 2.
+"""
 cache = {1:1, 1:2}
 # Eager cache, powers of 2
 cache[4] = 3
@@ -48,11 +52,15 @@ def collatz_read (s) :
 # collatz_eval
 # ------------
 
+
 def collatz_eval (i, j) :
     """
     i the beginning of the range, inclusive
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
+
+    Computes the max cycle length between i and j. 
+    Stores cycle lengths in Cache for a quick reference.
     """
 
     assert i > 0
@@ -85,8 +93,11 @@ def collatz_eval (i, j) :
     assert max_cycle_length > 0
     return max_cycle_length
 
-# Computes and returns cycle length of n.
 def collatz_helper (n) :
+    """
+    Computes and returns cycle length of n + cycle lengths found in cache
+    """
+
     assert n > 0
 
     # Cycle length less than 3 is itself
