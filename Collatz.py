@@ -34,6 +34,11 @@ cache[131072] = 18
 cache[262144] = 19
 cache[524288] = 20
 
+#Meta Cache
+# meta_cache = {1000: 179, 2000: 182, 3000: 217}
+
+
+
 
 # ------------
 # collatz_read
@@ -76,6 +81,11 @@ def collatz_eval (i, j) :
     assert j >= i
 
     max_cycle_length = 0
+
+    # Meta Cache check
+    # if ((j - i) > 1000) :
+    #     for n in range (i, (i / 1000)) 
+
 
     for n in range (i, j + 1) :
         # Check to see if already in cache

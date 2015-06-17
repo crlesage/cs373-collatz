@@ -95,6 +95,9 @@ def collatz_eval (i, j) :
 
 # Computes and returns cycle length of n.
 def collatz_helper (n) :
+    """
+    Computes and returns cycle length of n + cycle lengths found in cache
+    """
     assert n > 0
 
     # Cycle length less than 3 is itself
@@ -116,7 +119,7 @@ def collatz_helper (n) :
 
     # Return the current cycle length plus if there is a cache value
     return cycle_length + cache[n]
-    
+
 # -------------
 # collatz_print
 # -------------
