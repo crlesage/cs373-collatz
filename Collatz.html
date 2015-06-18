@@ -1,35 +1,46 @@
- 
- 
-Collatz	index
-/v/filer4b/v41q001/downing/public_html/cs373/github/collatz/Collatz.py
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Collatz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
 
-# ---------------------------
-# projects/collatz/Collatz.py
-# Copyright (C) 2015
-# Glenn P. Downing
-# ---------------------------
-
- 
-Functions
-      	  	
-
-collatz_eval(i, j)
-    i the beginning of the range, inclusive
-    j the end       of the range, inclusive
-    return the max cycle length of the range [i, j]
-
-collatz_print(w, i, j, v)
-    print three ints
-    w a writer
-    i the beginning of the range, inclusive
-    j the end       of the range, inclusive
-    v the max cycle length
-
-collatz_read(s)
-    read two ints
-    s a string
-    return a list of two ints, representing the beginning and end of a range, [i, j]
-
-collatz_solve(r, w)
-    r a reader
-    w a writer
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Collatz</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/crlesage/cs373/Project1/cs373-collatz/Collatz.py">/v/filer4b/v38q001/crlesage/cs373/Project1/cs373-collatz/Collatz.py</a></font></td></tr></table>
+    <p><tt>Cache&nbsp;dictionary&nbsp;for&nbsp;reference.<br>
+Includes&nbsp;eager&nbsp;cache&nbsp;represented&nbsp;by&nbsp;powers&nbsp;of&nbsp;2.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-collatz_eval"><strong>collatz_eval</strong></a>(i, j)</dt><dd><tt>i&nbsp;the&nbsp;beginning&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
+j&nbsp;the&nbsp;end&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
+return&nbsp;the&nbsp;max&nbsp;cycle&nbsp;length&nbsp;of&nbsp;the&nbsp;range&nbsp;[i,&nbsp;j]<br>
+&nbsp;<br>
+Computes&nbsp;the&nbsp;max&nbsp;cycle&nbsp;length&nbsp;between&nbsp;i&nbsp;and&nbsp;j.&nbsp;<br>
+Stores&nbsp;cycle&nbsp;lengths&nbsp;in&nbsp;Cache&nbsp;for&nbsp;a&nbsp;quick&nbsp;reference.</tt></dd></dl>
+ <dl><dt><a name="-collatz_helper"><strong>collatz_helper</strong></a>(n)</dt><dd><tt>Computes&nbsp;and&nbsp;returns&nbsp;cycle&nbsp;length&nbsp;of&nbsp;n&nbsp;+&nbsp;cycle&nbsp;lengths&nbsp;found&nbsp;in&nbsp;cache</tt></dd></dl>
+ <dl><dt><a name="-collatz_print"><strong>collatz_print</strong></a>(w, i, j, v)</dt><dd><tt>print&nbsp;three&nbsp;ints<br>
+w&nbsp;a&nbsp;writer<br>
+i&nbsp;the&nbsp;beginning&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
+j&nbsp;the&nbsp;end&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
+v&nbsp;the&nbsp;max&nbsp;cycle&nbsp;length</tt></dd></dl>
+ <dl><dt><a name="-collatz_read"><strong>collatz_read</strong></a>(s)</dt><dd><tt>read&nbsp;two&nbsp;ints<br>
+s&nbsp;a&nbsp;string<br>
+return&nbsp;a&nbsp;list&nbsp;of&nbsp;two&nbsp;ints,&nbsp;representing&nbsp;the&nbsp;beginning&nbsp;and&nbsp;end&nbsp;of&nbsp;a&nbsp;range,&nbsp;[i,&nbsp;j]</tt></dd></dl>
+ <dl><dt><a name="-collatz_solve"><strong>collatz_solve</strong></a>(r, w)</dt><dd><tt>r&nbsp;a&nbsp;reader<br>
+w&nbsp;a&nbsp;writer</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>cache</strong> = {1: 2, 4: 3, 8: 4, 16: 5, 32: 6, 64: 7, 128: 8, 256: 9, 512: 10, 1024: 11, ...}</td></tr></table>
+</body></html>

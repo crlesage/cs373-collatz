@@ -1,0 +1,118 @@
+commit 452a8b6fbfc208004ae8b561712b4fb042b03ff9
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Tue Jun 16 20:56:01 2015 -0500
+
+    Added Collatz.html
+
+commit 9a324ae8d67b7bd4c6b417a364bb72456d1cd003
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Tue Jun 16 20:45:33 2015 -0500
+
+    Added Cache implementation that works, missing meta cache
+
+commit 8027d21d2865aac21f421efa25f1a7caffed6186
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Tue Jun 16 17:53:11 2015 -0500
+
+    Implemented eager cache and lazy cache.
+
+commit 8939b88cab1617249d4c242f90c015d4abcb5525
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Mon Jun 15 22:20:09 2015 -0500
+
+    On step 28: BEFORE cache implementation.
+
+commit 22170c1326c5b93f4ba0e3cce228247cc2b08e55
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Mon Jun 15 20:40:09 2015 -0500
+
+    Step 23: Accepted on Sphere, time of 2.53
+
+commit 7ce0d0b7a3aa4785ff181844dbc8997d844f9277
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Mon Jun 15 20:16:32 2015 -0500
+
+    Step 17/18: Unit tests added to TestCollatz.py and simple computation added to Collatz.py
+
+commit fd8bcf70e6683ae3209adfd137d646fd86cf75dc
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Mon Jun 15 16:37:15 2015 -0500
+
+    Step 16: Changed unit tests and expected failures.
+
+commit eab87a4122902dd041f73516cc7900437d70f6b9
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Mon Jun 15 16:23:30 2015 -0500
+
+    Step 14: first make check. Confirmed expected successes.
+
+commit fb4142fe60fd93930f6c7725ea9a21e8a3a0a335
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Mon Jun 15 15:55:00 2015 -0500
+
+    Changed makefile.sample to makefile
+
+commit 1b444898aba46932ef7545bd13eb1bf6ccdc9a58
+Merge: 2ccfb2e 41ef39c
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Sun Jun 14 19:37:33 2015 -0500
+
+    Merge branch 'dev' of https://github.com/crlesage/cs373-collatz into dev
+
+commit 2ccfb2e11863fee1179ff899eb669a04291b1057
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Sun Jun 14 19:36:19 2015 -0500
+
+    Add in eid
+
+commit 41ef39c61fd157e63722788643a824cc198c2a94
+Author: crlesage <crlesage@gmail.com>
+Date:   Sun Jun 14 19:23:07 2015 -0500
+
+    Delete .gitignore~
+
+commit a2636319e24de03c5ecf76f962bb676dff9d0a4f
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Sun Jun 14 19:21:20 2015 -0500
+
+    Added .gitignore file
+
+commit debaf221c0a42bd338548b60b526b8fb0a37fa8d
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Sun Jun 14 18:56:33 2015 -0500
+
+    Added all files to master branch.
+
+commit 5d7c5442749092825e54083151a12bc0bd4fec31
+Merge: 52fe071 7310339
+Author: crlesage <crlesage@gmail.com>
+Date:   Sun Jun 14 18:27:06 2015 -0500
+
+    Merge pull request #11 from crlesage/dev
+    
+    Add files to dev
+
+commit 52fe071930011d66342c5b6cf7b804a607bc2efa
+Merge: 22f84b6 77eea2e
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Sun Jun 14 17:58:39 2015 -0500
+
+    Merge branch 'master' of https://github.com/crlesage/cs373-collatz
+
+commit 22f84b660a96a1a7326dc5cd6d268e753a93517a
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Sun Jun 14 17:50:15 2015 -0500
+
+    Added all files.
+
+commit 7310339fe5385f7b50d73d8b856c100d8b6c24ad
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Sun Jun 14 17:26:08 2015 -0500
+
+    Added all files.
+
+commit 77eea2eae27a925535d004ed4fe8d6fb8d8b59ec
+Author: Chris LeSage <crlesage@gmail.com>
+Date:   Sun Jun 14 17:18:16 2015 -0500
+
+    first commit
